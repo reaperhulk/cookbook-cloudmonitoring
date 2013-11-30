@@ -104,7 +104,6 @@ if node['cloud_monitoring']['agent']['token'].nil?
       group "root"
       mode 0600
       variables(
-        :monitoring_id => "#{node.hostname}",
         :monitoring_token =>  token
       )
       action :nothing
